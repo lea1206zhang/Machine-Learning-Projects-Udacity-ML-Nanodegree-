@@ -20220,16 +20220,16 @@ IiIiEoM6TCIiIiIiIjGowyQiIiIiIhKDOkwiIiIiIiIx/D9bctzZ4xBNvwAAAABJRU5ErkJggg==
 <li>Total Variance explained by the first 4 prinicipal components = 0.4993+0.2259+0.1049+0.0978= 0.9279 ~~ 93% of variance</li>
 </ul>
 <ul>
-<li>Dimension -1 is the first principal component which accoutns for nearly 50% of the variance in the data. From the chart, we see a strong positive correlation of Detergent_Paper , Milk, Grocery with First Principal component. The positive direction on the first component indicates higher spending on these product categories.</li>
+<li>Dimension -1 is the first principal component which accounts for nearly 50% of the variance in the data. From the chart, we see a strong positive correlation of Detergent_Paper , Milk, Grocery with First Principal component. The positive direction on the first component indicates higher spending on these product categories.</li>
 </ul>
 <ul>
-<li>Dimension-2 is the second principal component. From the chart, we see a strong positive correlation of Frozen , Fresh, Delicattesen with Second Principal component. The positive direction on the second component indicates higher spending on these product categories.</li>
+<li>Dimension-2 is the second principal component. From the chart, we see a strong positive correlation of Frozen , Fresh, Delicattesen with Second Principal component. </li>
 </ul>
 <ul>
-<li>Dimension-3 is the third principal component mostly represents variations in Fresh and Delicatessen". The positive direction on the third component indicates higher spending on Delicatessen and lower spending on Fresh.</li>
+<li>Dimension-3 is the third principal component.The positive bars indicates higher spending on Delicatessen and negative bar indicates lower spending on Fresh.</li>
 </ul>
 <ul>
-<li>Dimension-4 is the fourth principal component mostly represents variations in Frozen and Delicatessen. The positive direction on the fourth component indicates higher spending on Delicatessen and lower spending on Frozen items.</li>
+<li>Dimension-4 is the fourth principal component .The positive bar indicates higher spending on Delicatessen and negative bar indicates lower spending on Frozen items.</li>
 </ul>
 
 </div>
@@ -21556,25 +21556,20 @@ AMRCQAkAAAAAiIWAEgAAAAAQCwElAAAAACCW/w/kNGxRD8HUPgAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Advantages of K Means model: 
-a) Easy to implement and understand. 
-b) Algorithm runs quickly and works very well for data in spherical/circular form/shape. 
-c) Algorithm works very well on well defined high dimensional data sets.</li>
-</ul>
-<ul>
-<li>Advantages of Gaussian Mixture Model : 
-a) Performs soft clustering ie data points are not assigned to a cluster directly as it is based on probability of sample belonging to a cluster. 
-b) If we are unsure of the number of clusters and data is sort of overlapping / densely packed, we can use gaussian mixture model as it works very well.
-c) Works well with any data distribution.</li>
+<li><p>Advantages of K Means model: 
+a) Easy implementation and the logic is straightforward to understand. Runs very fast.
+b) Algorithm works very well for demarcated circular/spherical data shapes.</p>
+</li>
+<li><p>Advantages of Gaussian Mixture Model : 
+a) Performs soft clustering ie data points are not assigned to a cluster directly as the points are assigned to cluster based on iterative assigning of probability of point belonging to a cluster.
+b) If we are unsure of the number of clusters and data is sort of overlapping / densely packed, we can use gaussian mixture model as it works very well on such problems.</p>
+</li>
 </ul>
 <ul>
 <li>The data points are log normalized and now forms a normal distribution. We have also removed all outliers from the data set. </li>
 </ul>
 <ul>
-<li>But we do not find any well defined clusters on the bipolar plot and data points are very close to each other. Hence we do not want to perform hard clustering as we might classify it in a cluster but the data might belong to different smaller cluster. </li>
-</ul>
-<ul>
-<li>Hence we will go ahead with Gaussian mixture model clustering.</li>
+<li>But we do not find any well defined clusters on the bipolar plot and data points are very close to each other. Hence we do not want to perform hard clustering as we might classify it in a cluster but the data might belong to different smaller clusters. We dont want to take any chance and hence we will go ahead with Gaussian mixture model clustering.</li>
 </ul>
 
 </div>
@@ -21691,13 +21686,13 @@ For n_clusters = 12 The average silhouette_score is : 0.16177154491746376
 <p>For n_clusters = 3 The average silhouette_score is : 0.36</p>
 <p>For n_clusters = 4 The average silhouette_score is : 0.29</p>
 <p>For n_clusters = 5 The average silhouette_score is : 0.27</p>
-<p>For n_clusters = 6 The average silhouette_score is : 0.29</p>
-<p>For n_clusters = 7 The average silhouette_score is : 0.30</p>
-<p>For n_clusters = 8 The average silhouette_score is : 0.31</p>
-<p>For n_clusters = 9 The average silhouette_score is : 0.30</p>
-<p>For n_clusters = 10 The average silhouette_score is : 0.20</p>
-<p>For n_clusters = 11 The average silhouette_score is : 0.23</p>
-<p>For n_clusters = 12 The average silhouette_score is : 0.20</p>
+<p>For n_clusters = 6 The average silhouette_score is : 0.31</p>
+<p>For n_clusters = 7 The average silhouette_score is : 0.29</p>
+<p>For n_clusters = 8 The average silhouette_score is : 0.34</p>
+<p>For n_clusters = 9 The average silhouette_score is : 0.29</p>
+<p>For n_clusters = 10 The average silhouette_score is : 0.25</p>
+<p>For n_clusters = 11 The average silhouette_score is : 0.20</p>
+<p>For n_clusters = 12 The average silhouette_score is : 0.16</p>
 <p>** Of these clusters, For n_clusters=2, we find the best silhouette_score of 0.4436</p>
 
 </div>
@@ -22702,7 +22697,7 @@ feedback from Segment-0 population to just verify the cluster predictions.</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>We can train a supervised Classification algorithm on the customer data using annual purchase on each product category as the  features of the data , and customer segments[Segment 0/Segment 1] as our target variable . This would essentially become a supervised learning binary classification problem which we can solve using any of the classification algorithms like SVM, Logistic regression etc.</p>
+<p>We can train a supervised learner on the customer data using annual purchase on each product category as features of the data , and customer segments[Segment 0/Segment 1] as our target variable . This would essentially become a supervised learning binary classification problem which we can solve using any of the classification algorithms like SVM, Logistic regression etc.</p>
 <p>We can then use this classifier to predict customer segments[ Segment 0 / Segment 1]  for each new customer. 
 Once we know the customer segments, based on the A/B test results from above, we can arrange the appropriate delivery service for them</p>
 
